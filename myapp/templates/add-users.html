@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<form method="post">
+    {% csrf_token %}
+
+    <input type="text" name="fname" placeholder="Enter Fname please" >
+    <input type="text" name="mobile" placeholder="Enter MObile" >
+    <input type="text" name="address" placeholder="Enter Address please" >
+    <input type="email" name="email" placeholder="Enter  Email" >
+
+    <button type="submit">SAVE</button>
+</form>
+
+
+{{ allUser}}
+
+<table border="1">
+    <tr>
+        <td>Name: </td>
+        <td>Email:</td>
+        <td>Mobile:</td>
+        <td>Address:</td>
+    </tr>
+    {% for u in allUser %}
+    <tr>
+     <td>{{ u.fname }}</td>
+     <td>{{ u.email }}</td>
+     <td>{{ u.mobile }}</td>
+     <td>{{ u.address }}</td>
+    </tr>
+
+{% endfor %}
+</table>
+
+
+
+
+</body>
+</html>

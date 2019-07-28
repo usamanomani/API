@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {#    <meta charset="UTF-8">#}
+    {#    <title>Title</title>#}
+    {#    <b>Printing the test page for HTML</b>#}
+    {#    {{ z }}#}
+    {#    {% for i in  list1 %}#}
+    {#    {{ i }}<br>#}
+    {#    {% endfor %}#}
+    <form method="post">
+        {% csrf_token %}
+        <input type="number" name="t1">
+        <input type="number" name="t2">
+
+        <button type="submit">Add</button>
+
+
+    </form>
+
+    {{ c }}
+
+
+</head>
+<body>
+
+</body>
+</html>
